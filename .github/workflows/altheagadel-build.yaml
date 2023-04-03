@@ -39,3 +39,8 @@ jobs:
           folder: ${{ env.DEPLOYMENT_FOLDER }}
           config-file: .deploy-now/altheagadel/config.yaml
           action: upload
+          
+      - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: v16.x

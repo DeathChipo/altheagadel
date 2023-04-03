@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Althéa Gadel | Dessin traditionnel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/8afa075589.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    <label>
+        <input type="checkbox" id="ez" onclick="overflow()">
+        <span class="menu">
+            <span class="hamburger"></span>
+        </span>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="artplastique.html">Projets d'art plastique</a></li>
+            <li><a href="characterdesign.html">Character design</a></li>
+            <li><a href="dessindigital.html">Dessin digital</a></li>
+            <li><a href="dessintraditionnel.html">Dessin traditionnel</a></li>
+            <li><a href="projetsnotables.html">Projets notables</a></li>
+            <li><a href="da.html">DA en pixel art de jeu vidéo</a></li>
+        </ul>
+    </label>
+    <header>
+        <h1>Dessin traditionnel</h1>
+    </header>
+    <hr>
+    <div class="content">
+        <p class="presentation">Voici un ensemble de croquis triés par catégories (croquis simples, croquis de nature, d'animaux, dessins d'observation, dessins de perspectives, et enfin croquis de visages). J'utilise de nombreux types d'ustensiles lorsque je veux dessiner rapidement sur papier (stylos noir/bleu/rouge, crayons à papier, feutres à l'eau, surligneurs...).</p>
+        <div id="croquis">
+            <h2>Croquis</h2>
+            <div id="imagesContainer">
+                <div class="firstColumn">
+                    <script>
+                        for (let i = 0; i <= 25; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/dessintraditionnel/${i}.jpg`;
+                            img.alt = i;
+                            img.id = i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('t'+i).style.opacity = '1';
+                                document.getElementById('t'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.firstColumn').appendChild(img);
+                        }
+                    </script>
+                </div>
+                <div class="secondColumn">
+                    <script>
+                        for (let i = 26; i <= 49; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/dessintraditionnel/${i}.jpg`;
+                            img.alt = i;
+                            img.id = i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('t'+i).style.opacity = '1';
+                                document.getElementById('t'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.secondColumn').appendChild(img);
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="descriptions">
+                <script>
+                    const array = ['"k"', '"l"']
+                    for (i = 0; i <= 49; i++) {
+                        const div = document.createElement('div');
+                        div.id = `t${i}`;
+                        div.addEventListener('click', function() {
+                            this.style.opacity = '0';
+                            this.style.pointerEvents = 'none';
+                        });
+                        document.querySelector('.descriptions').appendChild(div);
+                        const p = document.createElement('p');
+                        p.innerText = array[i];
+                        div.appendChild(p);
+                    }
+                </script>
+            </div>
+        </div>
+        <div id="animaux">
+            <h2>Animaux, nature</h2>
+            <div id="imagesContainer1">
+                <div class="firstColumn1">
+                    <script>
+                        for (let i = 1; i <= 9; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/dessintraditionnel/animaux/${i}.jpg`;
+                            img.alt = 's'+i;
+                            img.id = 's'+i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('ts'+i).style.opacity = '1';
+                                document.getElementById('ts'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.firstColumn1').appendChild(img);
+                        }
+                    </script>
+                </div>
+                <div class="secondColumn1">
+                    <script>
+                        for (let i = 10; i <= 18; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/dessintraditionnel/animaux/${i}.jpg`;
+                            img.alt = 's'+i;
+                            img.id = 's'+i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('ts'+i).style.opacity = '1';
+                                document.getElementById('ts'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.secondColumn1').appendChild(img);
+                        }
+                    </script>
+                </div>
+                <div class="descriptions1">
+                    <script>
+                        const array1 = ['"i"', '"j"']
+                        for (i = 1; i <= 18; i++) {
+                            const div = document.createElement('div');
+                            div.id = `ts${i}`;
+                            div.addEventListener('click', function() {
+                                this.style.opacity = '0';
+                                this.style.pointerEvents = 'none';
+                            });
+                            document.querySelector('.descriptions1').appendChild(div);
+                            const p = document.createElement('p');
+                            p.innerText = array1[i-1];
+                            div.appendChild(p);
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div id="dessinobservation">
+            <h2>Dessin d'observation</h2>
+            <div id="imagesContainer2">
+                <div class="firstColumn2">
+                    <script>
+                        for (let i = 1; i <= 12; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/dessintraditionnel/dessinobservation/${i}.jpg`;
+                            img.alt = 'r'+i;
+                            img.id = 'r'+i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('tr'+i).style.opacity = '1';
+                                document.getElementById('tr'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.firstColumn2').appendChild(img);
+                        }
+                    </script>
+                </div>
+                <div class="secondColumn2">
+                    <script>
+                        for (let i = 13; i <= 23; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/dessintraditionnel/dessinobservation/${i}.jpg`;
+                            img.alt = 'r'+i;
+                            img.id = 'r'+i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('tr'+i).style.opacity = '1';
+                                document.getElementById('tr'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.secondColumn2').appendChild(img);
+                        }
+                    </script>
+                </div>
+                <div class="descriptions2">
+                    <script>
+                        const array2 = ['"m"', '"n"']
+                        for (i = 1; i <= 23; i++) {
+                            const div = document.createElement('div');
+                            div.id = `tr${i}`;
+                            div.addEventListener('click', function() {
+                                this.style.opacity = '0';
+                                this.style.pointerEvents = 'none';
+                            });
+                            document.querySelector('.descriptions2').appendChild(div);
+                            const p = document.createElement('p');
+                            p.innerText = array2[i-1];
+                            div.appendChild(p);
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div id="perspectives">
+            <h2>Perspectives</h2>
+            <div id="imagesContainer3">
+                <div class="firstColumn3">
+                    <script>
+                        for (let i = 1; i <= 11; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/dessintraditionnel/perspectives/${i}.jpg`;
+                            img.alt = 'b'+i;
+                            img.id = 'b'+i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('tb'+i).style.opacity = '1';
+                                document.getElementById('tb'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.firstColumn3').appendChild(img);
+                        }
+                    </script>
+                </div>
+                <div class="secondColumn3">
+                    <script>
+                        for (let i = 12; i <= 23; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/dessintraditionnel/perspectives/${i}.jpg`;
+                            img.alt = 'b'+i;
+                            img.id = 'b'+i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('tb'+i).style.opacity = '1';
+                                document.getElementById('tb'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.secondColumn3').appendChild(img);
+                        }
+                    </script>
+                </div>
+                <div class="descriptions3">
+                    <script>
+                        const array3 = ['"o"', '"p"']
+                        for (i = 1; i <= 23; i++) {
+                            const div = document.createElement('div');
+                            div.id = `tb${i}`;
+                            div.addEventListener('click', function() {
+                                this.style.opacity = '0';
+                                this.style.pointerEvents = 'none';
+                            });
+                            document.querySelector('.descriptions3').appendChild(div);
+                            const p = document.createElement('p');
+                            p.innerText = array3[i-1];
+                            div.appendChild(p);
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div id="visages">
+            <h2>Visages</h2>
+            <div id="imagesContainer4">
+                <div class="firstColumn4">
+                    <script>
+                        for (let i = 1; i <= 16; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/dessintraditionnel/visages/${i}.jpg`;
+                            img.alt = 'w'+i;
+                            img.id = 'w'+i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('tw'+i).style.opacity = '1';
+                                document.getElementById('tw'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.firstColumn4').appendChild(img);
+                        }
+                    </script>
+                </div>
+                <div class="secondColumn4">
+                    <script>
+                        for (let i = 17; i <= 34; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/dessintraditionnel/visages/${i}.jpg`;
+                            img.alt = 'w'+i;
+                            img.id = 'w'+i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('tw'+i).style.opacity = '1';
+                                document.getElementById('tw'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.secondColumn4').appendChild(img);
+                        }
+                    </script>
+                </div>
+                <div class="descriptions4">
+                    <script>
+                        const array4= ['"q"', '"r"']
+                        for (i = 1; i <= 34; i++) {
+                            const div = document.createElement('div');
+                            div.id = `tw${i}`;
+                            div.addEventListener('click', function() {
+                                this.style.opacity = '0';
+                                this.style.pointerEvents = 'none';
+                            });
+                            document.querySelector('.descriptions4').appendChild(div);
+                            const p = document.createElement('p');
+                            p.innerText = array4[i-1];
+                            div.appendChild(p);
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <div>
+            <p>Althéa Gadel</p>
+            <p>2023</p>
+        </div>
+        <p>Toutes les images appartiennent au propriétaire du site</p>
+    </footer>
+    <a href="#top" id="topbutton" onclick="topFunction()"><i class="fa-solid fa-angle-up arrow"></i></a>
+</body>
+</html>

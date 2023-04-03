@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Althéa Gadel | DA d'un jeu en pixel art</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/8afa075589.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    <label>
+        <input type="checkbox" id="ez" onclick="overflow()">
+        <span class="menu">
+            <span class="hamburger"></span>
+        </span>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="artplastique.html">Projets d'art plastique</a></li>
+            <li><a href="characterdesign.html">Character design</a></li>
+            <li><a href="dessindigital.html">Dessin digital</a></li>
+            <li><a href="dessintraditionnel.html">Dessin traditionnel</a></li>
+            <li><a href="projetsnotables.html">Projets notables</a></li>
+            <li><a href="da.html">DA en pixel art de jeu vidéo</a></li>
+        </ul>
+    </label>
+    <header>
+        <h1>DA d'un jeu en pixel art</h1>
+    </header>
+    <hr>
+    <div class="content">
+        <p class="presentation">Avec un ami, j'ai débuté la création d'un jeu vidéo type top down 2D (comme les anciens Zelda). Mon travail est de m'occuper de la direction artistique du jeu. Ce dernier se nomme "La grande aventure du chevalier aux cheveux soyeux". Le personnage principal n'a pas encore de nom et nous travaillons encore sur le sénario, mais voici l'avancée actuelle des graphismes du jeu.</p>
+        <div class="imageContainerDA">
+            <img src="images/da/1.png" alt="1" class="1"> <!--onclick="document.getElementById('t1').style.opacity = 1; document.getElementById('t1').style.pointerEvents = 'all';"-->
+            <img src="images/da/2.png" alt="2" class="2"> <!--onclick="document.getElementById('t2').style.opacity = 1; document.getElementById('t2').style.pointerEvents = 'all';"-->
+            <img src="images/da/3.png" alt="3" class="3"> <!--onclick="document.getElementById('t3').style.opacity = 1; document.getElementById('t3').style.pointerEvents = 'all';"-->
+        </div>
+        <div class="descriptions">
+            <script>
+                const array = ['"Sprites du personnages et de certains éléments de décors"', '"Tiles pour créer la map"', '"Sprites de l\'épée du joueur"']
+                for (i = 1; i <= 3; i++) {
+                    const div = document.createElement('div');
+                    div.id = `t${i}`;
+                    div.addEventListener('click', function() {
+                        this.style.opacity = '0';
+                        this.style.pointerEvents = 'none';
+                    });
+                    document.querySelector('.descriptions').appendChild(div);
+                    const p = document.createElement('p');
+                    p.innerText = array[i-1];
+                    div.appendChild(p);
+                }
+            </script>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <div>
+            <p>Althéa Gadel</p>
+            <p>2023</p>
+        </div>
+        <p>Toutes les images appartiennent au propriétaire du site</p>
+    </footer>
+    <a href="#top" id="topbutton" onclick="topFunction()"><i class="fa-solid fa-angle-up arrow"></i></a>
+</body>
+</html>

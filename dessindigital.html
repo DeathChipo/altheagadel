@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Althéa Gadel | Dessin digital</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/8afa075589.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    <label>
+        <input type="checkbox" id="ez" onclick="overflow()">
+        <span class="menu">
+            <span class="hamburger"></span>
+        </span>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="artplastique.html">Projets d'art plastique</a></li>
+            <li><a href="characterdesign.html">Character design</a></li>
+            <li><a href="dessindigital.html">Dessin digital</a></li>
+            <li><a href="dessintraditionnel.html">Dessin traditionnel</a></li>
+            <li><a href="projetsnotables.html">Projets notables</a></li>
+            <li><a href="da.html">DA en pixel art de jeu vidéo</a></li>
+        </ul>
+    </label>
+    <header>
+        <h1>Dessin digital</h1>
+    </header>
+    <hr>
+    <div class="content">
+        <p class="presentation">Je suis tombée amoureuse du dessin digital à la fin des années de collège, j'ai mis très longtemps avant de prendre en main les logiciels, en autodidacte. J'utilise principalement Krita (parce qu'il est gratuit) mais j'ai débuté sur Adobe Fresco. J'invente la majorité de mes illustrations que j'offre ensuite à des proches, il m'arrive aussi de reproduire des illustrations de référence pour travailler les couleurs, les lumières, m'entraîner, etc... Le côté rapide et pratique du dessin digital m'a amenée à réaliser un certain nombre de croquis pour travailler les proportions humaines (voir partie croquis digitaux).</p>
+        <div id="illustrations">
+            <h2>Illustrations</h2>
+            <div id="imagesContainer">
+                <div class="firstColumn">
+                    <script>
+                        for (let i = 1; i <= 25; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/illustrations/${i}.jpg`;
+                            img.alt = i;
+                            img.id = i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('t'+i).style.opacity = '1';
+                                document.getElementById('t'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.firstColumn').appendChild(img);
+                        }
+                    </script>
+                </div>
+                <div class="secondColumn">
+                    <script>
+                        for (let i = 26; i <= 47; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/illustrations/${i}.jpg`;
+                            img.alt = i;
+                            img.id = i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('t'+i).style.opacity = '1';
+                                document.getElementById('t'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.secondColumn').appendChild(img);
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="descriptions">
+                <script>
+                    const array = ['"e"', '"f"']
+                    for (i = 1; i <= 47; i++) {
+                        const div = document.createElement('div');
+                        div.id = `t${i}`;
+                        div.addEventListener('click', function() {
+                            this.style.opacity = '0';
+                            this.style.pointerEvents = 'none';
+                        });
+                        document.querySelector('.descriptions').appendChild(div);
+                        const p = document.createElement('p');
+                        p.innerText = array[i-1];
+                        div.appendChild(p);
+                    }
+                </script>
+            </div>
+        </div>
+        <div id="croquisdigitaux">
+            <h2>Croquis digitaux</h2>
+            <div id="imagesContainer1">
+                <div class="firstColumn1">
+                    <script>
+                        for (let i = 1; i <= 22; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/croquisdigitaux/${i}.jpg`;
+                            img.alt = 's'+i;
+                            img.id = 's'+i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('ts'+i).style.opacity = '1';
+                                document.getElementById('ts'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.firstColumn1').appendChild(img);
+                        }
+                    </script>
+                </div>
+                <div class="secondColumn1">
+                    <script>
+                        for (let i = 23; i <= 47; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/croquisdigitaux/${i}.jpg`;
+                            img.alt = 's'+i;
+                            img.id = 's'+i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('ts'+i).style.opacity = '1';
+                                document.getElementById('ts'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.secondColumn1').appendChild(img);
+                        }
+                    </script>
+                </div>
+                <div class="descriptions1">
+                    <script>
+                        const array1 = ['"g"', '"h"']
+                        for (i = 1; i <= 41; i++) {
+                            const div = document.createElement('div');
+                            div.id = `ts${i}`;
+                            div.addEventListener('click', function() {
+                                this.style.opacity = '0';
+                                this.style.pointerEvents = 'none';
+                            });
+                            document.querySelector('.descriptions1').appendChild(div);
+                            const p = document.createElement('p');
+                            p.innerText = array1[i-1];
+                            div.appendChild(p);
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div id="pixelart">
+            <h2>Pixel art</h2>
+            <div id="imagesContainer2">
+                <div class="firstColumn2">
+                    <script>
+                        for (let i = 1; i <= 5; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/illustrations/pixelart/${i}.png`;
+                            img.alt = 'r'+i;
+                            img.id = 'r'+i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('tr'+i).style.opacity = '1';
+                                document.getElementById('tr'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.firstColumn2').appendChild(img);
+                        }
+                    </script>
+                </div>
+                <div class="secondColumn2">
+                    <script>
+                        for (let i = 6; i <= 10; i++) {
+                            const img = document.createElement('img');
+                            img.src = `images/illustrations/pixelart/${i}.png`;
+                            img.alt = 'r'+i;
+                            img.id = 'r'+i;
+                            /*img.addEventListener('click', () => {
+                                document.getElementById('tr'+i).style.opacity = '1';
+                                document.getElementById('tr'+i).style.pointerEvents = 'all';
+                            });*/
+                            document.querySelector('.secondColumn2').appendChild(img);
+                        }
+                    </script>
+                </div>
+                <div class="descriptions2">
+                    <script>
+                        const array2 = ['"m"', '"n"']
+                        for (i = 1; i <= 10; i++) {
+                            const div = document.createElement('div');
+                            div.id = `tr${i}`;
+                            div.addEventListener('click', function() {
+                                this.style.opacity = '0';
+                                this.style.pointerEvents = 'none';
+                            });
+                            document.querySelector('.descriptions2').appendChild(div);
+                            const p = document.createElement('p');
+                            p.innerText = array2[i-1];
+                            div.appendChild(p);
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <div>
+            <p>Althéa Gadel</p>
+            <p>2023</p>
+        </div>
+        <p>Toutes les images appartiennent au propriétaire du site</p>
+    </footer>
+    <a href="#top" id="topbutton" onclick="topFunction()"><i class="fa-solid fa-angle-up arrow"></i></a>
+</body>
+</html>

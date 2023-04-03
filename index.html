@@ -1,2 +1,75 @@
-TEST
-&
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Althéa Gadel | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="script1.js" defer></script>
+</head>
+<body id="body">
+    <label>
+        <input type="checkbox" id="ez" onclick="overflow()">
+        <span class="menu">
+            <span class="hamburger"></span>
+        </span>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="artplastique.html">Projets d'art plastique</a></li>
+            <li><a href="characterdesign.html">Character design</a></li>
+            <li><a href="dessindigital.html">Dessin digital</a></li>
+            <li><a href="dessintraditionnel.html">Dessin traditionnel</a></li>
+            <li><a href="projetsnotables.html">Projets notables</a></li>
+            <li><a href="da.html">DA en pixel art de jeu vidéo</a></li>
+        </ul>
+    </label>
+    <header>
+        <h1>Althéa Gadel Portfolio</h1>
+    </header>
+    <hr>
+    <div class="content">
+        <p class="presentation">Bienvenue sur ce site internet qui rassemble une grande partie de mon travail artistique, vous y retrouverez des projets datant, pour les plus anciens, d'il y a quatre ans.</p>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="images/accueil/1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <img src="images/accueil/2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <img src="images/accueil/3.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/accueil/4.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/accueil/5.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/accueil/6.jpg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <div>
+            <p>Althéa Gadel</p>
+            <p>2023</p>
+        </div>
+        <p>Toutes les images appartiennent au propriétaire du site</p>
+    </footer>
+</body>
+</html>

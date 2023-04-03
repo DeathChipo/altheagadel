@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Althéa Gadel | Projets d'art plastique</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/8afa075589.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    <label>
+        <input type="checkbox" id="ez" onclick="overflow()">
+        <span class="menu">
+            <span class="hamburger"></span>
+        </span>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="artplastique.html">Projets d'art plastique</a></li>
+            <li><a href="characterdesign.html">Character design</a></li>
+            <li><a href="dessindigital.html">Dessin digital</a></li>
+            <li><a href="dessintraditionnel.html">Dessin traditionnel</a></li>
+            <li><a href="projetsnotables.html">Projets notables</a></li>
+            <li><a href="da.html">DA en pixel art de jeu vidéo</a></li>
+        </ul>
+    </label>
+    <header>
+        <h1>Projets d'art plastique</h1>
+    </header>
+    <hr>
+    <div class="content">
+        <p class="presentation">De 2012 à 2020 j'ai suivi des cours d'art plastique dans la galerie d'art de ma ville (La cour des arts, à Tulle) j'ai pu y expérimenter plusieurs techniques telles que l'aquarelle, l'achrylique, le lavis, la BD, le modelage, etc... J'ai aussi réalisé différents travaux plastiques lors de mes cours à l'EDAA. On retrouvera ci-dessous un assortiment de mes projets personnels les plus récents.</p>
+        <div id="imagesContainer">
+            <div class="firstColumn">
+                <script>
+                    for (let i = 1; i <= 30; i++) {
+                        const img = document.createElement('img');
+                        img.src = `images/artplastique/${i}.jpg`;
+                        img.alt = i;
+                        img.id = i;
+                        /*img.addEventListener('click', () => {
+                            document.getElementById('t'+i).style.opacity = '1';
+                            document.getElementById('t'+i).style.pointerEvents = 'all';
+                        });*/
+                        document.querySelector('.firstColumn').appendChild(img);
+                    }
+                </script>
+            </div>
+            <div class="secondColumn">
+                <script>
+                    for (let i = 31; i <= 55; i++) {
+                        const img = document.createElement('img');
+                        img.src = `images/artplastique/${i}.jpg`;
+                        img.alt = i;
+                        img.id = i;
+                        /*img.addEventListener('click', () => {
+                            document.getElementById('t'+i).style.opacity = '1';
+                            document.getElementById('t'+i).style.pointerEvents = 'all';
+                        });*/
+                        document.querySelector('.secondColumn').appendChild(img);
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="descriptions">
+            <script>
+                const array = ['"a"']
+                for (i = 1; i <= 55; i++) {
+                    const div = document.createElement('div');
+                    div.id = `t${i}`;
+                    div.addEventListener('click', function() {
+                        this.style.opacity = '0';
+                        this.style.pointerEvents = 'none';
+                    });
+                    document.querySelector('.descriptions').appendChild(div);
+                    const p = document.createElement('p');
+                    p.innerText = array[i-1];
+                    div.appendChild(p);
+                }
+            </script>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <div>
+            <p>Althéa Gadel</p>
+            <p>2023</p>
+        </div>
+        <p>Toutes les images appartiennent au propriétaire du site</p>
+    </footer>
+    <a href="#top" id="topbutton" onclick="topFunction()"><i class="fa-solid fa-angle-up arrow"></i></a>
+</body>
+</html>

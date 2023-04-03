@@ -33,17 +33,9 @@ jobs:
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-eu.ionos.space
-          project-id: 527555da-8be2-471a-bcd0-74fbdad65bba
+          project-id: 0c74657e-1395-4cd9-94d5-8b36c8ded216
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
           config-file: .deploy-now/altheagadel/config.yaml
           action: upload
-
-      - name: Build Node assets
-        env:
-          CI: true
-          SITE_URL: ${{ steps.project.outputs.site-url }}
-        run: |
-          npm ci
-          npm run build
